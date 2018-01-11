@@ -76,6 +76,7 @@ end
 local action = function(msg, blocks, ln)
         if blocks[1] == 'start' or blocks[1] == 'help' then
         db:hincrby('bot:gen', 'users', 1)
+	db:sadd('bot:bc', msg.from.id)
         if msg.chat.type == 'private' then
             local message = [[توضیحات برنامه صیغه یاب❤️👌🏻👇🏻]]
             local keyboard = do_keyboard_private()
@@ -85,7 +86,7 @@ local action = function(msg, blocks, ln)
     end
 if blocks[1] == 'broadcast' and blocks[2] and is_admin(msg) then
     local gps = db:hget('bot:gen', 'users') or 0
-          local gpss = db:smembers('bot:gen', 'users') or 0
+          local gpss = db:smembers('bot:bc') or 0
 	for i=1, #gpss do
 		  api.sendMessage(gpss[i], blocks[2], true)
     end
