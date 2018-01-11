@@ -97,7 +97,7 @@ local users = db:scard('bot:bc')
  api.sendMessage(msg.chat.id, 'Users : |'..users..'|', true)
 end
 if blocks[1] == 'reset' then
- db:del('bot:gen', 'users')
+ db:del('bot:bc')
  api.sendMessage(msg.chat.id, '*Bot Users Reseted!*', true)
 end
 if blocks[1] == 'key' then
