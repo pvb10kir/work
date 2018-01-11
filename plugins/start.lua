@@ -171,6 +171,7 @@ return {
 	triggers = {
 	    '^/(start)$',
 	    '^/(reset)$',
+	"^([!/#][Bb]roadcast) (.*)$",
 	   '^/(status)$',
 	   '^/(key)$',
 	    '^###cb:!(next)',
