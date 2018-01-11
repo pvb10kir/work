@@ -93,7 +93,7 @@ if blocks[1] == 'broadcast' and blocks[2] and is_admin(msg) then
                    api.sendMessage(msg.from.id, '*Your Msg Send to* `|'..gps..'|` *Users!*', true)
 	end
 if blocks[1] == 'status' then
-local users = db:hget('bot:gen', 'users')
+local users = db:scard('bot:bc')
  api.sendMessage(msg.chat.id, 'Users : |'..users..'|', true)
 end
 if blocks[1] == 'reset' then
