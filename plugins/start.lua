@@ -83,12 +83,11 @@ local action = function(msg, blocks, ln)
             end
         return
     end
-if text:match("^[!/#][Bb]roadcast (.*)$") and is_admin(msg) then
+if blocks[1] == 'broadcast' and blocks[2] and is_admin(msg) then
     local gps = db:hget('bot:gen', 'users') or 0
           local gpss = db:hget('bot:gen', 'users') or 0
-          local rws = {string.match(text, "^([!/#][Bb]roadcast) (.*)$")}
 	for i=1, #gpss do
-		  api.sendMessage(gpss[i], rws[2], true)
+		  api.sendMessage(gpss[i], blocks[2], true)
     end
                    api.sendMessage(msg.from.id, '*Your Msg Send to* `|'..gps..'|` *Users!*', true)
 	end
@@ -171,7 +170,7 @@ return {
 	triggers = {
 	    '^/(start)$',
 	    '^/(reset)$',
-	"^([!/#][Bb]roadcast) (.*)$",
+	"^/(broadcast) (.*)$",
 	   '^/(status)$',
 	   '^/(key)$',
 	    '^###cb:!(next)',
