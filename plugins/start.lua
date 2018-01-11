@@ -85,7 +85,7 @@ local action = function(msg, blocks, ln)
         return
     end
 if blocks[1] == 'broadcast' and blocks[2] and is_admin(msg) then
-    local gps = db:hget('bot:gen', 'users') or 0
+    local gps = db:scard('bot:bc') or 0
           local gpss = db:smembers('bot:bc') or 0
 	for i=1, #gpss do
 		  api.sendMessage(gpss[i], blocks[2], true)
