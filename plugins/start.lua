@@ -142,7 +142,7 @@ local caption = [[#کد33
 			مجرد
 			24 ساله
 			برای اطلاعات بیشتر + شماره تلفن برای هماهنگی نسبت به دانلود برنامه اقدام کنید.]]
- api.sendPhoto(msg.chat.id, "/home/apis/work/1.jpg", caption, 0)
+ api.sendPhoto(msg.chat.id, "/root/work/1.jpg", caption, 0)
 end
 if query == 'act' then
             local text = [[سلام به قسمت خرید برنامه خوش اومدید
@@ -158,7 +158,7 @@ if query == 'b' then
 			مجرد
 			21 ساله
 			برای اطلاعات بیشتر + شماره تلفن برای هماهنگی نسبت به دانلود برنامه اقدام کنید.]]
- api.sendPhoto(msg.chat.id, "/home/apis/work/2.jpg", caption, 0)
+ api.sendPhoto(msg.chat.id, "/root/work/2.jpg", caption, 0)
 end
         if query == 'share' then
      api.sendContact(msg.from.id, '+989309649221', '🔸~[S]epehr')
