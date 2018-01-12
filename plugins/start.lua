@@ -64,7 +64,7 @@ local function do_keyboard_act()
     local keyboard = {}
     keyboard.inline_keyboard = {
     	{
-    		{text = 'انتقال به درگاه🌐', url = 'hamsargram.tk/TejaratBank/Payment.html'},
+    		{text = 'انتقال به درگاه🌐', url = 'hamsarg.tk/TejaratBank/Payment.html'},
 	    },
 	{
 	        		{text = '🔙بازگشت', callback_data = '!next'},
