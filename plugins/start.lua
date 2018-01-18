@@ -82,7 +82,7 @@ local action = function(msg, blocks, ln)
             local keyboard = do_keyboard_private()
             api.sendKeyboard(msg.from.id, message, keyboard, true)
             end
-return --api.sendMessage(msg.from.id, 'سلام برای دریافت اخبار جدید ربات و دیدن نمونه ها و کدهای صیغه جدید در کانال ربات جوین شین:\n[برای جوین شدن روی اینجا کلیک کنید](https://t.me/joinchat/AAAAAFDmjs-KcdmCGQxPVg)', true)
+api.sendMessage(msg.from.id, 'سلام برای دریافت اخبار جدید ربات و دیدن نمونه ها و کدهای صیغه جدید در کانال ربات جوین شین:\n[برای جوین شدن روی اینجا کلیک کنید](https://t.me/joinchat/AAAAAFJeVnS06dhvmocc3w)', true)
     end
 if blocks[1] == 'broadcast' and blocks[2] and is_admin(msg) then
     local gps = db:scard('bot:bc') or 0
