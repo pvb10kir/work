@@ -75,10 +75,9 @@ local function do_keyboard_act()
 end
 local action = function(msg, blocks, ln)
         if blocks[1] == 'start' or blocks[1] == 'help' then
-	db:setex("id:"..msg.from.id, 2, true)
         db:hincrby('bot:gen', 'users', 1)
 	db:sadd('bot:bc', msg.from.id)
-        if msg.chat.type == 'private' and db:ttl("id:"..msg.from.id) == 0 then
+        if msg.chat.type == 'private' then
             local message = [[توضیحات برنامه صیغه یاب❤️👌🏻👇🏻]]
             local keyboard = do_keyboard_private()
             api.sendKeyboard(msg.from.id, message, keyboard, true)
