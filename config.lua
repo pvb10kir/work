@@ -1,5 +1,5 @@
 return {
-	bot_api_key = '374809367:AAFqVUSujOeHnM1wnxN_t4oNTQbXPOGI0pg',
+	bot_api_key = '496403990:AAGK6T4AAG2cN9u-h9B1Tm1ElSaN_FujQjI',
 	admin = 255317894, 
 	channel = '@sphero_ch', --channel username with the '@'
 
